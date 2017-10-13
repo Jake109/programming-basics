@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task_7
+namespace task_9
 {
     class Program
     {
@@ -14,11 +14,11 @@ namespace Task_7
             string userInput = Console.ReadLine();
             int number = int.Parse(userInput);
 
-            if (number >= 1)
-            {
-                int i = 0;
-                int f = 0;
+            int i = 0;
+            int f = 0;
 
+            if (number >= 1)
+            {                
                 do
                 {
                     i = i + 1;
@@ -28,7 +28,15 @@ namespace Task_7
                 Console.WriteLine($"annoit luvun {number}, vastaus: {f}");
             }
             else
-                Console.WriteLine("luvun pitaa olla vahintaan 1");
+            {
+                do
+                {
+                    i = i - 1;
+                    f = f + i;
+                }
+                while (i > number);
+                Console.WriteLine($"annoit luvun {number}, vastaus: {f}");
+            }
 
             Console.ReadKey();
         }

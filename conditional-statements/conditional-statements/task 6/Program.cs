@@ -14,17 +14,22 @@ namespace task_6
             string userInput = Console.ReadLine();
             int number = int.Parse(userInput);
 
-
+            if (number >= 1)
+            {
                 int i = 0;
                 int f = 1;
 
-            do
-            {
-                i = i + 1;
-                f = f * i;
+                do
+                {
+                    i = i + 1;
+                    f = f * i;
+                }
+                while (i < number);
+                Console.WriteLine($"syotit {number}, vastaus: {f}");
+                Console.ReadKey();
             }
-            while (i < number);
-            Console.WriteLine($"syotit {number}, vastaus: {f}");
+            else
+                Console.WriteLine("numeron pitaa olla vahintaan 1");
             Console.ReadKey();
         }
     }
