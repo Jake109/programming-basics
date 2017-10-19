@@ -21,11 +21,11 @@ namespace Task_5
                 double number = rnd.NextDouble();
                 counter = counter + 1;
 
-                if (number<0.4)
+                if (number <= 0.4)
                 {
                     Console.WriteLine($"{counter}. 1");
                 }
-                else if(number < 0.6)
+                else if(number <= 0.6)
                 {
                     Console.WriteLine($"{counter}. x");
                 }
